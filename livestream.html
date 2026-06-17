@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livestream | SachsenEnergie Glasfaser</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Übertragung der Online-Infoveranstaltung zum Glasfaserausbau, direkt im Browser.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <!--
+    HINWEIS: Dies ist die Seite hinter dem Button "SachsenEnergie Infoveranstaltung".
+    Kein Passwortschutz mehr (bewusst offen). Vor einer Veranstaltung den Teams-Stream-Link
+    (iframe src) und den Direktlink (href) unten einsetzen.
+  -->
+</head>
+<body class="page-livestream-gast">
+
+  <header class="site-header">
+    <a class="site-header__logo" href="index.html">
+      <img src="assets/logo.svg" alt="SachsenEnergie">
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="termine-info-veranstaltungen.html">Termine Info-Veranstaltungen</a>
+      <a href="unterlagen.html">Unterlagen</a>
+      <a href="impressum.html">Impressum</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <header class="ga-hero">
+      <div class="ga-wrap">
+        <span class="ga-eyebrow"><span class="ga-dot"></span>Glasfaserausbau in Sachsen</span>
+        <h1>Infoveranstaltung im Livestream</h1>
+        <p class="ga-lead">Verfolgen Sie unsere Online-Infoveranstaltung hier direkt im Browser, ohne zusätzliche Software. Der Stream startet automatisch zur angekündigten Uhrzeit.</p>
+      </div>
+    </header>
+
+    <!-- ÜBERTRAGUNG -->
+    <section class="ga-stream">
+      <div class="ga-wrap">
+        <span class="ga-eyebrow"><span class="ga-dot"></span>Live</span>
+        <h2 class="ga-h2">Übertragung</h2>
+        <div class="ga-stream-frame">
+          <!-- TODO: Teams-/Stream-Einbettungs-URL hier einsetzen (src) -->
+          <iframe src="HIER_TEAMS_EMBED_URL_EINSETZEN"
+                  title="Livestream der Infoveranstaltung"
+                  allow="camera; microphone; fullscreen; speaker; display-capture; autoplay"></iframe>
+        </div>
+        <p class="ga-stream-cap">Sollte die Übertragung nicht starten, laden Sie die Seite bitte neu oder öffnen Sie den Stream über den Direktlink weiter unten.</p>
+      </div>
+    </section>
+
+    <!-- HINWEISE -->
+    <section class="ga-note-alt">
+      <div class="ga-wrap">
+        <span class="ga-eyebrow"><span class="ga-dot"></span>Gut zu wissen</span>
+        <h2 class="ga-h2">Hinweise zur Teilnahme</h2>
+        <div class="ga-note-grid">
+          <div class="ga-note">
+            <div class="ga-note-title">Kein Download nötig</div>
+            <p>Die Übertragung läuft direkt im Browser. Sie müssen Teams nicht installieren und sich nicht anmelden.</p>
+          </div>
+          <div class="ga-note">
+            <div class="ga-note-title">Fragen stellen</div>
+            <p>Während der Veranstaltung können Sie Ihre Fragen jederzeit über die Chat- bzw. Frage-Funktion im Stream einreichen.</p>
+          </div>
+          <div class="ga-note">
+            <div class="ga-note-title">Bester Empfang</div>
+            <p>Empfohlen werden eine stabile Internetverbindung und ein aktueller Browser (Chrome, Edge, Firefox oder Safari).</p>
+          </div>
+          <div class="ga-note">
+            <div class="ga-note-title">Direktlink</div>
+            <!-- TODO: direkten Teilnahme-Link hier einsetzen (href) -->
+            <p>Alternativ können Sie der Veranstaltung über den <a href="HIER_TEAMS_JOIN_LINK_EINSETZEN" target="_blank" rel="noopener">direkten Teilnahme-Link</a> beitreten.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+</body>
+</html>

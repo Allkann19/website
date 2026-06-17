@@ -1,0 +1,353 @@
+/* =========================================================================
+   sachsenenergie-glasfaser.de  ·  gemeinsames Stylesheet
+   Allkann GmbH  ·  sauberer Nachbau (ersetzt die Hostinger-Embed-Blöcke)
+   Design-Tokens, Typografie, Kopf/Navigation und alle Seiten-Komponenten.
+   ========================================================================= */
+
+:root{
+  --ink:#1f2123;
+  --soft:#5a5f63;
+  --line:#e4e4e6;
+  --bg:#ffffff;
+  --bg-alt:#f5f5f4;
+  --bg-dark:#26282b;
+  --red:#e2001a;
+  --red-dark:#c30016;
+}
+
+*{box-sizing:border-box; margin:0; padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'Roboto',Arial,sans-serif;
+  color:var(--ink);
+  line-height:1.65;
+  font-size:16px;
+  background:var(--bg);
+}
+
+h1,h2,h3{font-weight:500; line-height:1.2; letter-spacing:-.01em}
+p{color:var(--soft)}
+a{color:var(--ink); text-decoration:none; transition:.2s}
+
+/* ---- Layout-Hilfen ---------------------------------------------------- */
+.ga-wrap{max-width:1040px; margin:0 auto; padding:0 24px}
+section{padding:64px 0}
+
+/* ---- Kopf / Navigation ------------------------------------------------ */
+.site-header{padding:26px 24px 0; text-align:center}
+.site-header__logo img{height:48px; width:auto}
+.site-nav{
+  display:flex; justify-content:center; flex-wrap:wrap;
+  gap:10px 36px; padding:20px 0 22px;
+}
+.site-nav a{
+  color:var(--ink); font-size:1.04rem; padding:2px 0 5px;
+  border-bottom:2px solid transparent;
+}
+.site-nav a:hover{color:var(--red)}
+.site-nav a.is-active{border-bottom-color:var(--ink)}
+
+/* ---- Hero (alle Seiten) ----------------------------------------------- */
+.ga-hero{background:#fff; padding:0 0 72px}
+.ga-hero .ga-wrap{border-top:3px solid var(--red); padding-top:64px}
+.ga-eyebrow{
+  display:inline-flex; align-items:center; gap:9px; font-size:.72rem;
+  letter-spacing:.18em; text-transform:uppercase; font-weight:700;
+  color:var(--soft); margin-bottom:20px;
+}
+.ga-dot{width:7px; height:7px; border-radius:50%; background:var(--red)}
+.ga-hero h1{font-size:clamp(2rem,5vw,3.1rem); color:var(--ink); max-width:18ch}
+.ga-lead{margin-top:20px; max-width:60ch; font-size:1.08rem; font-weight:300; color:var(--soft)}
+
+/* ---- generische Abschnitts-Bausteine ---------------------------------- */
+.ga-pill{
+  display:inline-block; font-size:.7rem; letter-spacing:.14em;
+  text-transform:uppercase; font-weight:700; color:var(--red); margin-bottom:14px;
+}
+.ga-h2{font-size:clamp(1.5rem,3.5vw,2.1rem); color:var(--ink); margin-bottom:14px}
+.ga-sub{max-width:58ch; margin-bottom:34px}
+.ga-sec-alt{background:transparent}
+.ga-note{margin-top:22px; font-size:.84rem; font-style:italic; color:var(--soft)}
+
+/* =======================================================================
+   HOME
+   ======================================================================= */
+.ga-partner{
+  display:inline-block; margin-top:30px; padding:10px 18px; border:1px solid var(--line);
+  border-radius:6px; background:#fff; font-size:.88rem; color:var(--soft);
+}
+.ga-partner b{color:var(--ink); font-weight:500}
+
+/* Statistiken */
+.ga-stats{padding:0 0 60px}
+.ga-stat-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+  background:var(--bg-alt); border:1px solid var(--line); border-radius:12px; padding:32px 30px;
+}
+.ga-stat{display:flex; flex-direction:column; padding:4px 26px; border-left:1px solid var(--line)}
+.ga-stat:first-child{border-left:none; padding-left:0}
+.ga-stat::before{content:""; width:22px; height:2px; background:var(--red); margin-bottom:14px; border-radius:1px}
+.ga-num{font-size:clamp(1.5rem,3.5vw,2.1rem); font-weight:500; color:var(--ink); line-height:1.1}
+.ga-lbl{font-size:.8rem; color:var(--soft); margin-top:8px}
+
+/* zweispaltiger Textblock */
+.ga-cols{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start}
+.ga-cols h2{font-size:clamp(1.5rem,3.5vw,2.1rem); max-width:16ch; color:var(--ink); margin-bottom:14px}
+.ga-cols p+p{margin-top:16px}
+
+/* Karten (Home: 3 Spalten, Akzentbalken) */
+.ga-card-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.ga-card{background:#fff; border:1px solid var(--line); border-radius:8px; padding:26px 24px}
+.ga-card h3{font-size:1.1rem; color:var(--ink); margin-bottom:10px; padding-left:13px; position:relative}
+.ga-card h3::before{content:""; position:absolute; left:0; top:.15em; width:3px; height:1em; background:var(--red); border-radius:2px}
+.ga-card p{font-size:.94rem}
+
+/* Ausbaugebiete */
+.ga-area-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+.ga-area{border:1px solid var(--line); border-radius:8px; padding:20px 22px; background:#fff}
+.ga-area h3{font-size:1rem; color:var(--ink); margin-bottom:12px; display:flex; align-items:center; gap:9px}
+.ga-sq{width:8px; height:8px; background:var(--red); border-radius:2px; flex-shrink:0}
+.ga-area ul{list-style:none; display:flex; flex-wrap:wrap; gap:6px}
+.ga-area li{
+  font-size:.85rem; color:var(--soft);
+  background:var(--bg-alt); border:1px solid var(--line); border-radius:6px; padding:5px 10px;
+}
+/* Ausbaugebiete als anklickbare Karten (Link zur Detailseite) */
+a.ga-area{display:block; text-decoration:none; transition:.2s}
+a.ga-area:hover{border-color:var(--red); box-shadow:0 6px 22px rgba(0,0,0,.06)}
+a.ga-area .ga-area-more{
+  display:inline-flex; align-items:center; gap:7px; margin-top:14px;
+  font-size:.82rem; font-weight:500; color:var(--red);
+}
+a.ga-area .ga-area-more span{transition:transform .2s}
+a.ga-area:hover .ga-area-more span{transform:translateX(4px)}
+
+/* =======================================================================
+   GEBIETS-DETAILSEITEN
+   ======================================================================= */
+.ga-orte-box{background:var(--bg-alt); border:1px solid var(--line); border-radius:12px; padding:28px 30px}
+.ga-chips{list-style:none; display:flex; flex-wrap:wrap; gap:8px; margin-top:6px}
+.ga-orte-box .ga-chips{margin-top:0}
+.ga-orte-box .ga-chips li{background:#fff}
+.ga-chips li{
+  font-size:.9rem; color:var(--ink);
+  background:var(--bg-alt); border:1px solid var(--line); border-radius:8px; padding:8px 14px;
+}
+.ga-back{display:inline-flex; align-items:center; gap:8px; margin-top:8px; font-size:.9rem; color:var(--soft)}
+.ga-back:hover{color:var(--red)}
+.ga-beratung{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:6px}
+.ga-beratung .ga-card-title{margin-bottom:8px}
+.ga-beratung p{font-size:.95rem}
+.ga-beratung p + p{margin-top:10px}
+.ga-beratung a{color:var(--ink); border-bottom:1px solid var(--line)}
+.ga-beratung a:hover{color:var(--red); border-color:var(--red)}
+@media(max-width:760px){ .ga-beratung{grid-template-columns:1fr} }
+
+/* Hinweis-/Sicherheitsblock */
+.ga-safety{
+  background:var(--bg-alt); border:1px solid var(--line); border-left:3px solid var(--red);
+  border-radius:12px; padding:30px 34px; max-width:none;
+}
+.ga-safety .ga-h2{font-size:1.35rem}
+
+/* Ansprechpartner (dunkler Block) */
+.ga-contact{background:transparent}
+.ga-contact .ga-wrap{background:var(--bg-dark); border-radius:14px; padding:48px 44px}
+.ga-contact .ga-pill{color:#fff; opacity:.7}
+.ga-contact .ga-h2{color:#fff}
+.ga-contact .ga-sub{color:rgba(255,255,255,.7)}
+.ga-people{display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-bottom:42px}
+.ga-person{
+  display:flex; gap:20px; align-items:center; background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:20px;
+}
+.ga-person img{width:92px; height:92px; border-radius:8px; object-fit:cover; flex-shrink:0}
+.ga-avatar{
+  width:92px; height:92px; border-radius:8px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--red); color:#fff; font-size:1.7rem; font-weight:700; letter-spacing:.02em;
+}
+.ga-person>div{display:flex; flex-direction:column}
+.ga-name{font-size:1.2rem; font-weight:500; color:#fff; line-height:1.2}
+.ga-role{font-size:.82rem; color:rgba(255,255,255,.62); margin-top:5px}
+.ga-mail{margin-top:10px; font-size:.83rem; color:#fff; border-bottom:1px solid rgba(255,255,255,.4)}
+.ga-mail:hover{color:#fff; border-color:#fff}
+.ga-office{display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap}
+.ga-office .ga-addr{color:rgba(255,255,255,.8); line-height:1.7}
+.ga-office .ga-addr strong{display:block; color:#fff; font-weight:500; font-size:1.05rem; margin-bottom:3px}
+.ga-office .ga-tel{
+  display:inline-block; background:#fff; color:var(--ink); font-weight:700; font-size:1.05rem;
+  padding:14px 28px; border-radius:6px;
+}
+.ga-office .ga-tel:hover{background:var(--red); color:#fff}
+
+/* =======================================================================
+   TERMINE
+   ======================================================================= */
+.ga-event-list{display:flex; flex-direction:column; gap:18px; margin-top:38px}
+.ga-event{
+  display:flex; gap:30px; align-items:flex-start;
+  background:var(--bg-alt); border:1px solid var(--line); border-left:3px solid var(--red);
+  border-radius:12px; padding:26px 32px; transition:.2s;
+}
+.ga-event:hover{background:#fff; box-shadow:0 6px 22px rgba(0,0,0,.05)}
+.ga-event-date{
+  flex-shrink:0; min-width:170px; display:flex; flex-direction:column; gap:4px;
+  border-right:1px solid var(--line); padding-right:26px;
+}
+.ga-event-day{font-weight:700; font-size:1.08rem; color:var(--ink)}
+.ga-event-time{font-size:.95rem; font-weight:500; color:var(--red)}
+.ga-event-body{padding-top:1px}
+.ga-event-title{font-size:1.15rem; font-weight:500; color:var(--ink); margin-bottom:5px}
+.ga-event-body p{font-size:.98rem}
+.ga-event-btn{
+  margin-left:auto; align-self:center; flex-shrink:0; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  background:var(--red); color:#fff; font-weight:500; font-size:.98rem;
+  padding:12px 22px; border-radius:8px; border:1px solid var(--red);
+  box-shadow:0 4px 14px rgba(226,0,26,.16);
+}
+.ga-event-btn:hover{background:var(--red-dark); border-color:var(--red-dark); box-shadow:0 6px 18px rgba(226,0,26,.24)}
+.ga-event-btn .ga-btn-arrow{font-size:1.05rem; line-height:1; transition:transform .2s}
+.ga-event-btn:hover .ga-btn-arrow{transform:translateX(4px)}
+.ga-events-note{margin-top:30px; font-size:.95rem; color:var(--soft); font-style:italic}
+
+/* =======================================================================
+   LIVESTREAM
+   ======================================================================= */
+.ga-access{
+  background:var(--bg-alt); border:1px solid var(--line); border-left:3px solid var(--red);
+  border-radius:14px; padding:40px 44px; text-align:left;
+}
+.ga-access .ga-eyebrow{margin-bottom:16px}
+.ga-access h2{font-size:1.4rem; color:var(--ink); margin-bottom:14px; max-width:24ch}
+.ga-access-info{font-size:1.06rem; color:var(--soft); max-width:60ch}
+.ga-access-info b{color:var(--ink); font-weight:500}
+.ga-btn{
+  display:inline-flex; align-items:center; gap:12px; margin-top:28px;
+  background:var(--red); color:#fff; font-weight:500; font-size:1.04rem;
+  padding:16px 30px; border-radius:10px; border:1px solid var(--red);
+  box-shadow:0 6px 20px rgba(226,0,26,.16);
+}
+.ga-btn:hover{background:var(--red-dark); border-color:var(--red-dark); box-shadow:0 8px 26px rgba(226,0,26,.24)}
+.ga-btn-arrow{font-size:1.15rem; line-height:1; transition:transform .2s}
+.ga-btn:hover .ga-btn-arrow{transform:translateX(4px)}
+.ga-access-hint{margin-top:18px; font-size:.86rem; color:var(--soft)}
+.ga-steps{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:34px}
+.ga-step{
+  display:flex; gap:16px; align-items:flex-start;
+  background:#fff; border:1px solid var(--line); border-radius:10px; padding:22px 24px;
+}
+.ga-step-no{
+  flex-shrink:0; width:34px; height:34px; display:flex; align-items:center; justify-content:center;
+  background:var(--bg-alt); border:1px solid var(--line); border-radius:50%;
+  font-weight:700; font-size:.95rem; color:var(--red);
+}
+.ga-step-body h3{font-size:1.02rem; color:var(--ink); margin-bottom:6px}
+.ga-step-body p{font-size:.9rem; color:var(--soft)}
+.ga-livestream-note{margin-top:30px; font-size:.9rem; color:var(--soft)}
+.ga-livestream-note .ga-tel{color:var(--ink); font-weight:500; border-bottom:1px solid var(--red)}
+.ga-livestream-note .ga-tel:hover{color:var(--red)}
+
+/* =======================================================================
+   UNTERLAGEN (Downloads)
+   ======================================================================= */
+.ga-dl-block{
+  background:var(--bg-alt); border:1px solid var(--line); border-radius:12px;
+  padding:24px 26px; margin-bottom:20px;
+}
+.ga-dl-block:last-of-type{margin-bottom:0}
+.ga-dl-head{font-size:1.05rem; color:var(--ink); margin-bottom:16px; display:flex; align-items:center; gap:9px}
+.ga-dl-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px}
+.ga-dl{
+  display:flex; align-items:center; gap:16px; min-width:0;
+  background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px 20px;
+}
+.ga-dl:hover{border-color:var(--red)}
+.ga-dl-ic{
+  flex-shrink:0; width:48px; height:48px; display:flex; align-items:center; justify-content:center;
+  background:var(--bg-alt); border:1px solid var(--line); border-radius:8px;
+  font-size:.66rem; font-weight:700; letter-spacing:.05em; color:var(--red);
+}
+.ga-dl-text{display:flex; flex-direction:column; flex:1; min-width:0}
+.ga-dl-type{font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:var(--red); margin-bottom:3px}
+.ga-dl-title{font-size:1.02rem; font-weight:500; color:var(--ink); line-height:1.25; overflow-wrap:anywhere}
+.ga-dl-arrow{
+  flex-shrink:0; width:34px; height:34px; display:flex; align-items:center; justify-content:center;
+  border:1px solid var(--line); border-radius:50%; font-size:1.1rem; color:var(--soft);
+}
+.ga-dl:hover .ga-dl-arrow{background:var(--red); border-color:var(--red); color:#fff}
+
+/* =======================================================================
+   IMPRESSUM
+   ======================================================================= */
+.ga-imp .ga-card-grid{grid-template-columns:repeat(2,1fr); gap:24px}
+.ga-imp .ga-card{border:1px solid var(--line); border-radius:8px; padding:28px 30px; background:#fff}
+.ga-card-title{
+  font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:700;
+  color:var(--red); margin-bottom:14px;
+}
+.ga-card .ga-card-title{padding-left:0}
+.ga-card .ga-card-title::before{display:none}
+.ga-addr{color:var(--ink); font-size:1.02rem; line-height:1.7; margin-bottom:18px}
+.ga-tel{display:inline-block; font-weight:500; color:var(--ink); border-bottom:1px solid var(--line)}
+.ga-tel:hover{color:var(--red); border-color:var(--red)}
+.ga-imp-alt .ga-wrap{
+  background:var(--bg-alt); border:1px solid var(--line); border-radius:14px; padding:48px 44px;
+}
+.ga-detail-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:34px 56px}
+.ga-detail-title{
+  font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:700;
+  color:var(--soft); margin-bottom:10px;
+}
+.ga-detail p{color:var(--ink); font-size:1rem; line-height:1.7}
+.ga-detail strong{font-weight:500}
+
+/* =======================================================================
+   LIVESTREAM-GASTBEREICH (passwortgeschützte Stream-Seite)
+   ======================================================================= */
+.ga-stream{background:#fff}
+.ga-stream-frame{
+  position:relative; width:100%; aspect-ratio:16/9;
+  background:var(--bg-dark); border:1px solid var(--line); border-radius:14px; overflow:hidden;
+}
+.ga-stream-frame iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.ga-stream-cap{margin-top:18px; font-size:.92rem; color:var(--soft)}
+.ga-note-alt{background:transparent}
+.ga-note-alt .ga-wrap{background:var(--bg-alt); border:1px solid var(--line); border-radius:14px; padding:48px 44px}
+.ga-note-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:30px 56px}
+.ga-note-title{
+  font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; font-weight:700;
+  color:var(--red); margin-bottom:10px; font-style:normal;
+}
+.ga-note p{color:var(--ink); font-size:1rem; line-height:1.7; font-style:normal}
+
+/* =======================================================================
+   Responsiv
+   ======================================================================= */
+@media(max-width:760px){
+  section{padding:46px 0}
+  .ga-stat-grid{grid-template-columns:repeat(2,1fr); gap:28px 20px; padding:26px 22px}
+  .ga-stat{border-left:none; padding:0}
+  .ga-stat::before{margin-bottom:10px}
+  .ga-cols,.ga-card-grid,.ga-area-grid,.ga-people,.ga-steps,.ga-note-grid{grid-template-columns:1fr}
+  .ga-note-alt .ga-wrap{padding:32px 24px}
+  .ga-imp .ga-card-grid{grid-template-columns:1fr}
+  .ga-detail-grid{grid-template-columns:1fr; gap:28px}
+  .ga-safety{padding:24px 22px}
+  .ga-contact .ga-wrap{padding:34px 24px}
+  .ga-office{flex-direction:column; align-items:flex-start; gap:20px}
+  .ga-access{padding:28px 22px}
+  .ga-dl-grid{grid-template-columns:minmax(0,1fr)}
+  .ga-dl-block{padding:18px 16px}
+  .ga-dl{padding:14px 16px; gap:12px}
+  .ga-event{flex-direction:column; gap:16px; padding:22px 24px}
+  .ga-event-date{
+    flex-direction:row; gap:14px; align-items:baseline;
+    border-right:none; border-bottom:1px solid var(--line); padding-right:0; padding-bottom:12px;
+    min-width:0; width:100%;
+  }
+  .ga-event-btn{margin-left:0; align-self:stretch; justify-content:center}
+}
