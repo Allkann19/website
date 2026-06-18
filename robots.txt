@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /livestream.html
+
+Sitemap: https://sachsenenergie-glasfaser.de/sitemap.xml
