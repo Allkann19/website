@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /livestream.html
+Disallow: /livestream-hausverwaltungen.html
+Disallow: /livestream-eigenheim.html
 
 Sitemap: https://sachsenenergie-glasfaser.de/sitemap.xml
