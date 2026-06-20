@@ -7,7 +7,7 @@ frei bearbeitbar und beliebig erweiterbar. Ersetzt die bisherigen Custom-HTML-Em
 ```
 website/
 ├── index.html                        → Startseite (Home)
-├── termine-info-veranstaltungen.html → Termine
+├── termine.html → Termine
 ├── livestream-infoveranstaltung.html → Livestream
 ├── unterlagen.html                   → Unterlagen / Downloads
 ├── impressum.html                    → Impressum
@@ -22,7 +22,7 @@ gemeinsame `assets/styles.css` zu. Design-Farben und Schrift sind als CSS-Variab
 
 ## Ändern
 - **Texte/Termine ändern:** in der jeweiligen `.html`-Datei den Text bearbeiten.
-- **Neuen Termin hinzufügen:** in `termine-info-veranstaltungen.html` einen `<article class="ga-event">`-Block kopieren.
+- **Neuen Termin hinzufügen:** in `termine.html` einen `<article class="ga-event">`-Block kopieren.
 - **Neue Seite anlegen:** eine bestehende `.html` kopieren, Inhalt anpassen, in der Navigation aller Seiten verlinken.
 - **Design anpassen:** Farben/Abstände zentral in `assets/styles.css`.
 
