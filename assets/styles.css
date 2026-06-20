@@ -373,3 +373,8 @@ a.ga-area:hover .ga-area-more span{transform:translateX(4px)}
   margin:0; padding:0 0 20px; color:var(--soft);
   font-weight:300; font-size:1rem; line-height:1.6;
 }
+
+/* ---- Vergangene Termine -------------------------------------------------- */
+.ga-event--past{opacity:.62; filter:grayscale(.3)}
+.ga-event--past:hover{box-shadow:none; background:var(--bg-alt)}
+.ga-event--past .ga-event-time{color:var(--soft)}
