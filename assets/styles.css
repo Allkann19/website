@@ -324,6 +324,36 @@ a.ga-area:hover .ga-area-more span{transform:translateX(4px)}
 }
 .ga-note p{color:var(--ink); font-size:1rem; line-height:1.7; font-style:normal}
 
+/* ---- Upload-Formular (Unterlagen einreichen) -------------------------- */
+.ga-upload{max-width:760px}
+.ga-hp{position:absolute; left:-9999px; opacity:0; height:0; width:0}
+.ga-form-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 20px}
+.ga-field{display:flex; flex-direction:column; gap:7px}
+.ga-field-full{grid-column:1 / -1}
+.ga-field>span{font-size:.82rem; font-weight:500; color:var(--ink)}
+.ga-field>span small{font-weight:400; color:var(--soft)}
+.ga-field input,.ga-field select,.ga-field textarea{
+  font-family:inherit; font-size:1rem; color:var(--ink); background:#fff;
+  border:1px solid var(--line); border-radius:9px; padding:12px 14px; width:100%;
+}
+.ga-field input:focus,.ga-field select:focus,.ga-field textarea:focus{
+  outline:none; border-color:var(--red); box-shadow:0 0 0 3px rgba(226,0,26,.10);
+}
+.ga-field textarea{resize:vertical}
+.ga-file input[type="file"]{padding:10px 14px; cursor:pointer}
+.ga-file input[type="file"]::file-selector-button{
+  font-family:inherit; font-size:.9rem; font-weight:500; color:#fff; cursor:pointer;
+  background:var(--red); border:none; border-radius:7px; padding:8px 14px; margin-right:14px;
+}
+.ga-file input[type="file"]::file-selector-button:hover{background:var(--red-dark)}
+.ga-consent{display:flex; align-items:flex-start; gap:11px; margin-top:22px; font-size:.9rem; color:var(--soft)}
+.ga-consent input{margin-top:4px; flex:0 0 auto; width:17px; height:17px; accent-color:var(--red)}
+.ga-consent a{color:var(--red); text-decoration:underline}
+.ga-btn[disabled]{opacity:.6; cursor:not-allowed}
+.ga-form-status{margin-top:18px; font-size:.95rem; min-height:1.2em}
+.ga-form-status.is-ok{color:#157a3c; font-weight:500}
+.ga-form-status.is-error{color:var(--red-dark); font-weight:500}
+
 /* =======================================================================
    Responsiv
    ======================================================================= */
@@ -340,6 +370,7 @@ a.ga-area:hover .ga-area-more span{transform:translateX(4px)}
   .ga-contact .ga-wrap{padding:34px 24px}
   .ga-office{flex-direction:column; align-items:flex-start; gap:20px}
   .ga-access{padding:28px 22px}
+  .ga-form-grid{grid-template-columns:minmax(0,1fr)}
   .ga-dl-grid{grid-template-columns:minmax(0,1fr)}
   .ga-dl-block{padding:18px 16px}
   .ga-dl{padding:14px 16px; gap:12px}
