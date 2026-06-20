@@ -351,3 +351,25 @@ a.ga-area:hover .ga-area-more span{transform:translateX(4px)}
   }
   .ga-event-btn{margin-left:0; align-self:stretch; justify-content:center}
 }
+
+/* ---- FAQ / Accordion -------------------------------------------------- */
+.ga-faq{display:flex; flex-direction:column; gap:10px; max-width:760px}
+.ga-faq details{
+  background:#fff; border:1px solid var(--line); border-radius:8px;
+  padding:0 22px; transition:.2s;
+}
+.ga-faq details[open]{border-color:var(--red)}
+.ga-faq summary{
+  list-style:none; cursor:pointer; padding:18px 0;
+  font-size:1.04rem; font-weight:500; color:var(--ink);
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+}
+.ga-faq summary::-webkit-details-marker{display:none}
+.ga-faq summary::after{
+  content:"+"; color:var(--red); font-weight:400; font-size:1.5rem; line-height:1;
+}
+.ga-faq details[open] summary::after{content:"\2013"}
+.ga-faq details p{
+  margin:0; padding:0 0 20px; color:var(--soft);
+  font-weight:300; font-size:1rem; line-height:1.6; max-width:64ch;
+}
