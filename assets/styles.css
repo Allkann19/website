@@ -325,7 +325,10 @@ a.ga-area:hover .ga-area-more span{transform:translateX(4px)}
 .ga-note p{color:var(--ink); font-size:1rem; line-height:1.7; font-style:normal}
 
 /* ---- Upload-Formular (Unterlagen einreichen) -------------------------- */
-.ga-upload{max-width:760px}
+.ga-upload{
+  background:var(--bg-alt); border:1px solid var(--line); border-radius:12px;
+  padding:28px 30px;
+}
 .ga-hp{position:absolute; left:-9999px; opacity:0; height:0; width:0}
 .ga-form-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 20px}
 .ga-field{display:flex; flex-direction:column; gap:7px}
@@ -371,6 +374,7 @@ a.ga-area:hover .ga-area-more span{transform:translateX(4px)}
   .ga-office{flex-direction:column; align-items:flex-start; gap:20px}
   .ga-access{padding:28px 22px}
   .ga-form-grid{grid-template-columns:minmax(0,1fr)}
+  .ga-upload{padding:20px 18px}
   .ga-dl-grid{grid-template-columns:minmax(0,1fr)}
   .ga-dl-block{padding:18px 16px}
   .ga-dl{padding:14px 16px; gap:12px}
