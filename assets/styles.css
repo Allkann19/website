@@ -329,6 +329,11 @@ a.ga-area:hover .ga-area-more span{transform:translateX(4px)}
   background:var(--bg-alt); border:1px solid var(--line); border-radius:12px;
   padding:28px 30px;
 }
+.ga-submit-steps{margin:0 0 6px; padding-left:1.3em; color:var(--ink)}
+.ga-submit-steps li{margin-bottom:10px; line-height:1.6}
+.ga-submit-steps li:last-child{margin-bottom:0}
+.ga-submit-note{margin-top:20px; font-size:.9rem; color:var(--soft); line-height:1.6}
+.ga-submit-note a{color:var(--red); text-decoration:underline}
 .ga-hp{position:absolute; left:-9999px; opacity:0; height:0; width:0}
 .ga-form-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 20px}
 .ga-field{display:flex; flex-direction:column; gap:7px}

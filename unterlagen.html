@@ -45,7 +45,7 @@
         <span class="ga-eyebrow"><span class="ga-dot"></span>Glasfaserausbau in Sachsen</span>
         <h1>Unterlagen zum Download</h1>
         <p class="ga-lead">Hier finden Sie alle wichtigen Dokumente rund um Ihren Glasfaseranschluss, gegliedert nach Ausbaugebiet. Wählen Sie Ihr Gebiet und laden Sie die passenden Unterlagen als PDF herunter.</p>
-        <a class="ga-btn" href="#hochladen">Ausgefüllte Unterlagen hochladen <span class="ga-btn-arrow">↓</span></a>
+        <a class="ga-btn" href="#hochladen">Ausgefüllte Unterlagen einreichen <span class="ga-btn-arrow">↓</span></a>
       </div>
     </header>
 
@@ -131,106 +131,60 @@
       </div>
     </section>
 
-    <!-- UNTERLAGEN HOCHLADEN -->
+    <!-- UNTERLAGEN EINREICHEN -->
     <section class="ga-sec" id="hochladen">
       <div class="ga-wrap">
         <span class="ga-pill">Unterlagen einreichen</span>
-        <h2 class="ga-h2">Ausgefüllte Unterlagen hochladen</h2>
-        <p class="ga-sub">Sie haben Ihr Formular oder Ihren Vertrag ausgefüllt und unterschrieben? Laden Sie das Dokument hier direkt hoch – als PDF, Foto oder Scan. Wir melden uns anschließend bei Ihnen.</p>
+        <h2 class="ga-h2">Ausgefüllte Unterlagen einreichen</h2>
+        <p class="ga-sub">Sie haben Ihr Formular oder Ihren Vertrag ausgefüllt und unterschrieben? Senden Sie uns das Dokument einfach per E-Mail – als PDF, Scan oder Foto. Wir melden uns anschließend bei Ihnen.</p>
 
-        <form class="ga-upload" id="uploadForm">
-          <!-- Web3Forms Access Key – hier euren Key eintragen: -->
-          <input type="hidden" name="access_key" value="22ac1029-0007-4010-934b-2fbd917e3aa0">
-          <input type="hidden" name="subject" value="Neue Unterlagen-Einreichung über sachsenenergie-glasfaser.de">
-          <input type="hidden" name="from_name" value="SachsenEnergie Glasfaser – Website">
-          <!-- Spamschutz (Honeypot) -->
-          <input type="checkbox" name="botcheck" class="ga-hp" tabindex="-1" autocomplete="off">
+        <div class="ga-upload">
+          <ol class="ga-submit-steps">
+            <li>Formular am Computer oder ausgedruckt ausfüllen und unterschreiben.</li>
+            <li>Als PDF speichern, einscannen oder mit dem Handy abfotografieren.</li>
+            <li>Über den Button unten an uns senden und das Dokument als Anhang hinzufügen.</li>
+          </ol>
 
-          <div class="ga-form-grid">
-            <label class="ga-field">
-              <span>Name *</span>
-              <input type="text" name="Name" required autocomplete="name">
-            </label>
-            <label class="ga-field">
-              <span>E-Mail *</span>
-              <input type="email" name="email" required autocomplete="email">
-            </label>
-            <label class="ga-field">
-              <span>Telefon</span>
-              <input type="tel" name="Telefon" autocomplete="tel">
-            </label>
-            <label class="ga-field">
-              <span>Ausbaugebiet</span>
-              <select name="Gebiet">
-                <option value="">Bitte wählen</option>
-                <option>Dresden</option>
-                <option>Bautzen</option>
-                <option>Bischofswerda</option>
-                <option>Sächsische Schweiz-Osterzgebirge</option>
-                <option>Görlitz</option>
-                <option>Meißen</option>
-                <option>Anderes / unbekannt</option>
-              </select>
-            </label>
-            <label class="ga-field ga-field-full">
-              <span>Anschrift (Straße, Hausnr., PLZ, Ort)</span>
-              <input type="text" name="Anschrift" autocomplete="street-address">
-            </label>
-            <label class="ga-field ga-field-full">
-              <span>Nachricht (optional)</span>
-              <textarea name="Nachricht" rows="3"></textarea>
-            </label>
-            <label class="ga-field ga-field-full ga-file">
-              <span>Dokument(e) hochladen * <small>(PDF, JPG oder PNG – max. 10 MB)</small></span>
-              <input type="file" name="attachment" accept=".pdf,.jpg,.jpeg,.png" multiple required>
-            </label>
+          <a class="ga-btn" href="mailto:Janina.Heyner.extern@sachsenenergie.de?subject=Meine%20ausgef%C3%BCllten%20Unterlagen%20%E2%80%93%20Glasfaseranschluss&amp;body=Guten%20Tag%2C%0A%0Aanbei%20sende%20ich%20Ihnen%20meine%20ausgef%C3%BCllten%20Unterlagen%20zum%20Glasfaseranschluss.%0A%0A(Bitte%20vergessen%20Sie%20nicht%2C%20das%20Dokument%20als%20Anhang%20hinzuzuf%C3%BCgen.)%0A%0AName%3A%0AAnschrift%3A%0ATelefon%3A%0AAusbaugebiet%3A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">
+            Unterlagen per E-Mail senden <span class="ga-btn-arrow">→</span>
+          </a>
+
+          <p class="ga-submit-note">Der Button öffnet Ihr E-Mail-Programm mit vorbereitetem Empfänger und Betreff. Bitte fügen Sie Ihr ausgefülltes Dokument noch als Anhang hinzu. Alternativ senden Sie uns die Unterlagen direkt an <a href="mailto:Janina.Heyner.extern@sachsenenergie.de">Janina.Heyner.extern@sachsenenergie.de</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANSPRECHPARTNER -->
+    <section class="ga-sec ga-contact" id="ansprechpartner">
+      <div class="ga-wrap">
+        <span class="ga-pill">Ihre Ansprechpartner</span>
+        <h2 class="ga-h2">Persönlich. Vor Ort.</h2>
+        <p class="ga-sub">Wir beraten Sie individuell zu Verfügbarkeit, Konditionen und Ablauf. Sprechen Sie uns einfach an.</p>
+        <div class="ga-people">
+          <div class="ga-person">
+            <img src="assets/janina-heyner.jpg" alt="Janina Heyner">
+            <div>
+              <span class="ga-name">Janina Heyner</span>
+              <span class="ga-role">Ansprechpartnerin für Vertragsfragen</span>
+              <a class="ga-mail" href="mailto:Janina.Heyner.extern@sachsenenergie.de">Janina.Heyner.extern@sachsenenergie.de</a>
+            </div>
           </div>
-
-          <label class="ga-consent">
-            <input type="checkbox" required>
-            <span>Ich willige ein, dass meine übermittelten Daten und Dokumente zur Bearbeitung meiner Anfrage gespeichert und verarbeitet werden. Hinweise dazu finden Sie in unserer <a href="assets/unterlagen/datenschutz.pdf" target="_blank" rel="noopener">Datenschutzvereinbarung</a>.</span>
-          </label>
-
-          <button type="submit" class="ga-btn">Unterlagen absenden <span class="ga-btn-arrow">→</span></button>
-          <p class="ga-form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
+          <div class="ga-person">
+            <img src="assets/jean-weninger.jpg" alt="Jean Christian Weninger">
+            <div>
+              <span class="ga-name">Jean Christian Weninger</span>
+              <span class="ga-role">Technischer Ansprechpartner</span>
+              <a class="ga-mail" href="mailto:JeanChristian.Weninger.extern@sachsenenergie.de">JeanChristian.Weninger.extern@sachsenenergie.de</a>
+            </div>
+          </div>
+        </div>
+        <div class="ga-office">
+          <a class="ga-tel" href="tel:+4935189665860">+49 351 89665 860</a>
+        </div>
       </div>
     </section>
 
   </main>
-
-  <script>
-    (function () {
-      var form = document.getElementById('uploadForm');
-      var status = document.getElementById('formStatus');
-      if (!form) return;
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var btn = form.querySelector('button[type="submit"]');
-        status.className = 'ga-form-status';
-        status.textContent = 'Wird gesendet …';
-        btn.disabled = true;
-        var data = new FormData(form);
-        fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
-          .then(function (r) { return r.json(); })
-          .then(function (res) {
-            if (res.success) {
-              form.reset();
-              status.className = 'ga-form-status is-ok';
-              status.textContent = 'Vielen Dank! Ihre Unterlagen wurden übermittelt. Wir melden uns bei Ihnen.';
-            } else {
-              status.className = 'ga-form-status is-error';
-              status.textContent = 'Leider hat das Senden nicht geklappt: ' + (res.message || 'Bitte später erneut versuchen oder uns per E-Mail kontaktieren.');
-            }
-          })
-          .catch(function () {
-            status.className = 'ga-form-status is-error';
-            status.textContent = 'Verbindungsfehler. Bitte versuchen Sie es erneut oder senden Sie uns die Unterlagen per E-Mail.';
-          })
-          .finally(function () { btn.disabled = false; });
-      });
-    })();
-  </script>
 
 </body>
 </html>
