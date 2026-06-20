@@ -1,0 +1,11 @@
+# sachsenenergie-glasfaser.de — kanonische Adresse erzwingen
+# Ziel: HTTPS + ohne www (passend zu den canonical-Links der Seite)
+RewriteEngine On
+
+# 1) www -> ohne www (und gleich auf HTTPS)
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# 2) HTTP -> HTTPS (fuer Aufrufe ohne www)
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
