@@ -353,7 +353,7 @@ a.ga-area:hover .ga-area-more span{transform:translateX(4px)}
 }
 
 /* ---- FAQ / Accordion -------------------------------------------------- */
-.ga-faq{display:flex; flex-direction:column; gap:10px; max-width:760px}
+.ga-faq{display:flex; flex-direction:column; gap:10px}
 .ga-faq details{
   background:#fff; border:1px solid var(--line); border-radius:8px;
   padding:0 22px; transition:.2s;
@@ -371,5 +371,5 @@ a.ga-area:hover .ga-area-more span{transform:translateX(4px)}
 .ga-faq details[open] summary::after{content:"\2013"}
 .ga-faq details p{
   margin:0; padding:0 0 20px; color:var(--soft);
-  font-weight:300; font-size:1rem; line-height:1.6; max-width:64ch;
+  font-weight:300; font-size:1rem; line-height:1.6;
 }
